@@ -29,7 +29,7 @@ class OtpCascade {
   /// Step 1: Register Passkey on this device
   static Future<Map<String, dynamic>> registerPasskey({
     required String userId,
-    required String email,
+    required String phone,
   }) async {
     final baseUrl = _checkBaseUrl;
 
@@ -38,7 +38,7 @@ class OtpCascade {
       final responseBegin = await http.post(
         Uri.parse('$baseUrl/api/otp/passkey/register/begin'),
         headers: {'Content-Type': 'application/json'},
-        body: jsonEncode({'user_id': userId, 'email': email}),
+        body: jsonEncode({'user_id': userId, 'phone': phone}),
       );
 
       if (responseBegin.statusCode != 200) {

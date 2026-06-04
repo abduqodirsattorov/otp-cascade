@@ -16,11 +16,11 @@ class PasskeyController extends Controller
     public function registerBegin(Request $request)
     {
         $request->validate([
-            'email' => 'required|email',
+            'phone' => 'required|string',
             'user_id' => 'required'
         ]);
 
-        $email = $request->input('email');
+        $phone = $request->input('phone');
         $userId = $request->input('user_id');
 
         // Generate cryptographic challenge (32 bytes)
@@ -38,8 +38,8 @@ class PasskeyController extends Controller
             ],
             'user' => [
                 'id' => base64_encode($userId),
-                'name' => $email,
-                'displayName' => explode('@', $email)[0],
+                'name' => $phone,
+                'displayName' => $phone,
             ],
             'pubKeyCredParams' => [
                 ['type' => 'public-key', 'alg' => -7],  // ES256

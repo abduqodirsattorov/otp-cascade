@@ -42,7 +42,7 @@ OtpCascade.initialize(baseUrl: 'https://api.sizningsaytingiz.uz');
 ```dart
 final result = await OtpCascade.registerPasskey(
   userId: '12345',
-  email: 'foydalanuvchi@pochta.uz',
+  phone: '+998901234567',
 );
 if (result['success']) {
   print("Passkey muvaffaqiyatli saqlandi!");

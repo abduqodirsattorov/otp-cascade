@@ -1,0 +1,29 @@
+# IDE and OS files
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+.DS_Store
+Thumbs.db
+
+# Laravel package specific ignores
+laravel-otp-cascade/vendor/
+laravel-otp-cascade/composer.lock
+
+# Flutter package specific ignores
+flutter-otp-cascade/.dart_tool/
+flutter-otp-cascade/.packages
+flutter-otp-cascade/.pub-cache/
+flutter-otp-cascade/.pub/
+flutter-otp-cascade/build/
+flutter-otp-cascade/ios/.symlinks/
+flutter-otp-cascade/ios/Pods/
+flutter-otp-cascade/pubspec.lock
+
+# Generated PDF/HTML reports
+otp_implementation_plan.pdf
+otp_implementation_plan.html
+output.pdf

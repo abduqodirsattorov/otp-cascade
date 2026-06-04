@@ -1,0 +1,20 @@
+name: flutter_otp_cascade
+description: Biometric Passkey (FIDO2) and In-App Push OTP cascade authentication client for Flutter.
+version: 1.0.0
+homepage: https://github.com/otp-cascade/flutter_otp_cascade
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+  flutter: '>=3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  http: ^1.1.0
+  local_auth: ^2.1.6
+  firebase_messaging: ^14.7.10
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
